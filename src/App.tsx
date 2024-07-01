@@ -6,8 +6,6 @@ import "./index.css";
 import { BlockChainLandingPage } from "./pages/BlockChainLandingPage";
 import { TokensPage } from "./pages/TokensPage";
 
-require("dotenv").config();
-
 function App() {
   const router = createBrowserRouter(
     [
