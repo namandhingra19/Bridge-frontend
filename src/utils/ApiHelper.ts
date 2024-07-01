@@ -5,12 +5,10 @@ class ApiHelper {
 
   constructor() {
     this.instance = axios.create({
-      headers: {
-        authorization: ""
-      },
+      baseURL: process.env.REACT_APP_BACKEND_URL,
     });
   }
-  
+
   async get<T>(url: string, config?: any): Promise<T> {
     try {
       const response: AxiosResponse<T> = await this.instance.get(url, config);
