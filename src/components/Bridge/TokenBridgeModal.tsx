@@ -1,10 +1,9 @@
-import React, { useState } from "react";
-import CustomDropdown from "../common/CustomDropdown";
+import { IconArrowRight } from "@tabler/icons-react";
+import { useState } from "react";
 import { createTransaction, sendQouteData } from "../../services/api";
-import { IconArrowRight, IconSwitchHorizontal } from "@tabler/icons-react";
-import { Toast1 } from "../common/Toast";
-import { Loader } from "../common/Loader";
+import CustomDropdown from "../common/CustomDropdown";
 import { LoaderOverlay } from "../common/LoaderOverlay";
+import { Toast1 } from "../common/Toast";
 interface TokenBridgeModalProps {
   isOpen: boolean;
   onClose: () => void;
@@ -81,8 +80,8 @@ const TokenBridgeModal = (props: TokenBridgeModalProps) => {
           </div>
           {values && (
             <div className="px-5">
-              <div className="flex items-center justify-between">
-                <div className="">
+              <div className="flex items-center justify-between pt-5">
+                <div>
                   <div className="text-sm font-semibold mb-5">Source</div>
                   <div className="flex items-center ">
                     <img

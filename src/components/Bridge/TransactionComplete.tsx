@@ -1,4 +1,3 @@
-import React from "react";
 
 interface TransactionDetailsProps {
   transactionDetails: any;
@@ -6,7 +5,7 @@ interface TransactionDetailsProps {
 
 const TransactionDetails = (props: TransactionDetailsProps) => {
   return (
-    <div className="max-w-3xl mx-auto mt-8 p-6 bg-white shadow-lg rounded-lg items-center">
+    <div className="max-w-3xl mx-auto mt-8 p-6 bg-white shadow-lg rounded-lg items-center pb-5">
       <div className="flex justify-center items-center bg-green-100 border-l-4 border-green-500 text-green-700 p-4 mb-4">
         <img
           src={require("../../assets/transactionComplete.webp")}

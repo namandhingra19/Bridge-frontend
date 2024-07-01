@@ -3,7 +3,7 @@ import { getAllBlockChains } from "../services/api";
 import BlockChainCard from "../components/Bridge/BlockChainCard";
 import { LoaderOverlay } from "../components/common/LoaderOverlay";
 
-export function Bridge() {
+export function BlockChainLandingPage() {
   const [blockChains, setBlockChains] = useState<
     {
       name: string;
@@ -35,7 +35,7 @@ export function Bridge() {
         px-4
       "
       >
-        <div className="text-3xl font-bold mt-10">
+        <div className="text-3xl font-bold mt-10 pl-3 mb-2">
           Select a blockchain to bridge
         </div>
         <div className="flex flex-wrap justify-center">
