@@ -15,7 +15,6 @@ const Navbar = () => {
       } md:w-64 fixed top-0 left-0 z-10 h-screen`}
     >
       <div className="flex flex-col h-full">
-        {/* Brand/logo section */}
         <div className="flex items-center justify-center h-16 border-b border-gray-700">
           <span className="text-xl font-bold">Logo</span>
         </div>
@@ -39,7 +38,7 @@ const Navbar = () => {
                 e.isActive ? "bg-gray-900" : ""
               }`;
             }}
-            to="/home"
+            to="/"
           >
             Home
           </NavLink>

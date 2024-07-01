@@ -1,12 +1,11 @@
 import { useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
-import { getAllTokens } from "../services/api";
-import TokenTable from "../components/Bridge/TokenTable";
+import { useParams } from "react-router-dom";
 import TokenBridgeModal from "../components/Bridge/TokenBridgeModal";
+import TokenTable from "../components/Bridge/TokenTable";
 import TransactionDetails from "../components/Bridge/TransactionComplete";
-import { Loader } from "../components/common/Loader";
 import { LoaderOverlay } from "../components/common/LoaderOverlay";
 import { Toast1 } from "../components/common/Toast";
+import { getAllTokens } from "../services/api";
 
 export function TokensPage() {
   const params = useParams();

@@ -1,12 +1,9 @@
-import React from "react";
-import logo from "./logo.svg";
-import "./App.css";
-import "./index.css";
-import { Main } from "./pages/Main";
-import { HomePage } from "./components/HomePage/HomePage";
-import { Bridge } from "./pages/Bridge";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import "./App.css";
+import { HomePage } from "./components/HomePage/HomePage";
 import { Layout } from "./components/Layout/Layout";
+import "./index.css";
+import { BlockChainLandingPage } from "./pages/BlockChainLandingPage";
 import { TokensPage } from "./pages/TokensPage";
 
 function App() {
@@ -17,12 +14,8 @@ function App() {
         element: <HomePage />,
       },
       {
-        path: "/home",
-        element: <HomePage />,
-      },
-      {
         path: "/bridge",
-        element: <Bridge />,
+        element: <BlockChainLandingPage />,
       },
       {
         path: "/bridge/:chainId",
