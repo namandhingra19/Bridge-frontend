@@ -1,24 +1,43 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import "./index.css";
+import { Main } from "./pages/Main";
+import { HomePage } from "./components/HomePage/HomePage";
+import { Bridge } from "./pages/Bridge";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import { Layout } from "./components/Layout/Layout";
+import { TokensPage } from "./pages/TokensPage";
 
 function App() {
+  const router = createBrowserRouter(
+    [
+      {
+        path: "/",
+        element: <HomePage />,
+      },
+      {
+        path: "/home",
+        element: <HomePage />,
+      },
+      {
+        path: "/bridge",
+        element: <Bridge />,
+      },
+      {
+        path: "/bridge/:chainId",
+        element: <TokensPage />,
+      },
+    ].map((route) => {
+      return {
+        ...route,
+        element: <Layout>{route.element}</Layout>,
+      };
+    })
+  );
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <RouterProvider router={router} />
     </div>
   );
 }
